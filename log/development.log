@@ -1713,3 +1713,48 @@ Processing by PagesController#home as HTML
   Rendered pages/home.html.erb within layouts/application (0.0ms)
   Rendered layouts/_footer.html.erb (2.5ms)
 Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:21:13 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_footer.html.erb (9.3ms)
+Completed 200 OK in 2319ms (Views: 2285.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 14:21:15 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 14:21:15 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-30 14:21:15 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 14:21:15 +1000
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-06-30 14:21:15 +1000
+
+
+Started GET "/assets/home-34f9170832de83f6fefe6e9e574f6a11805d3fbe80283498770111d2d8c30187.png" for ::1 at 2016-06-30 14:21:15 +1000
+
+
+Started GET "/assets/blank-b6a5fb26767767e284fba52f72371e9a358f28bdf44ffe6484a9da98a083d21b.png" for ::1 at 2016-06-30 14:21:15 +1000
+
+
+Started GET "/assets/about_us-547f5c99eca2e660f2e5ff3744959788197a09cf922c411b1fa095efa657c7ab.png" for ::1 at 2016-06-30 14:21:15 +1000
+
+
+Started GET "/about" for ::1 at 2016-06-30 14:21:19 +1000
+Processing by PagesController#about as HTML
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (4.9ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:21:21 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (3.7ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)

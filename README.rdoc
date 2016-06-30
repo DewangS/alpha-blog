@@ -1,1 +1,1 @@
-This is a blogging application in Rails
+This is the repository of alpha-blog web app using Ruby on Rails framework.
