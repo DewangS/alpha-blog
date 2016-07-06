@@ -1,0 +1,10 @@
+<%= form_for @article do |f| %>
+  <p>
+    <%= f.label :title %><br/>
+    <%= @article.title %>
+  </p>
+  <p>
+    <%= f.label :description %><br/>
+    <%= @article.description %>
+  </p>
+  <% end %>
