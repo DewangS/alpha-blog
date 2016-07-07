@@ -1,0 +1,14 @@
+<% flash.each do |key, value| %>
+    <% if key.start_with?("error") %>
+      <h4 class="alert-error">Unable to save this record due to below <%= value.count %> <%= "error".pluralize(value.count) %></h4>
+      <ul>
+        <% value.each do |msg| %>
+          <li><div class="alert alert-<%= key %>"><%= msg %></div></li>
+        <% end %>
+        <ul>
+    <% else %>
+      <ul>
+        <li><div class="alert-success"><%= value %></div></li>
+      </ul>
+    <% end %> 
+  <% end %>

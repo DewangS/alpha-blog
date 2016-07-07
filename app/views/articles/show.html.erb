@@ -1,10 +1,11 @@
-<%= form_for @article do |f| %>
+<h1>Showing details for article.</h1>
   <p>
-    <%= f.label :title %><br/>
+    Title: 
     <%= @article.title %>
   </p>
   <p>
-    <%= f.label :description %><br/>
+    Description: <br/>
     <%= @article.description %>
   </p>
-  <% end %>
+  <%= link_to "Edit", edit_article_path(@article), :class => 'actions'  %> |
+  <%= link_to "Back to Articles Listing", articles_path, :class => 'back-link' %>

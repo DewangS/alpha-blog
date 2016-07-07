@@ -1,0 +1,26 @@
+<% @page_title = "Articles" %>
+<div class="article index">
+  <h2>Articles</h2>
+  <%= link_to("<< Back to Articles", {:controller => "articles", :action => 'index'}, :class => 'back-link') %>
+  <%= link_to("Add New Article", {:action => 'new'}, :class => 'action new') %>
+  <div><%= pluralize(@articles.size, 'page') %> found.</div>
+  <table class="listing" summary="Article list">
+    <tr class="header">
+      <th>&nbsp;</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+    <% @articles.each do |article| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= article.title%></td>
+      <td><%= article.description %></td>
+      <td class="actions">
+        <%= link_to "Show", article_path(article), :class => 'action show' %>
+        <%= link_to "Edit", edit_article_path(article), :class => 'action edit' %>
+        
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
