@@ -6,7 +6,6 @@
   <div><%= pluralize(@articles.size, 'page') %> found.</div>
   <table class="listing" summary="Article list">
     <tr class="header">
-      <th>&nbsp;</th>
       <th>Title</th>
       <th>Description</th>
       <th>Actions</th>
@@ -18,7 +17,7 @@
       <td class="actions">
         <%= link_to "Show", article_path(article), :class => 'action show' %>
         <%= link_to "Edit", edit_article_path(article), :class => 'action edit' %>
-        
+        <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"},:class => 'action delete' %>
       </td>
     </tr>
     <% end %>

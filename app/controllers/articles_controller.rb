@@ -45,13 +45,13 @@ def update
 end
 
 def delete
-    article = Article.find(params[:id]).destroy
-    flash[:notice] = "Article '#{article.title}' successfully deleted."
-    redirect_to articles_path
+    
 end
 
 def destroy
-  @article = Article.find(params[:id])
+  article = Article.find(params[:id]).destroy
+  flash[:notice] = "Article '#{article.title}' successfully deleted."
+  redirect_to articles_path
 end
 
 private
