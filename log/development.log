@@ -28564,3 +28564,76 @@ Started GET "/assets/blank-b6a5fb26767767e284fba52f72371e9a358f28bdf44ffe6484a9d
 
 
 Started GET "/assets/orange-background-f876bcd0e40474853a05414ca0553d1dc70c6ac99fbb211c3945f18f58b24a8a.png" for ::1 at 2016-07-11 16:05:18 +1000
+
+
+Started GET "/articles" for ::1 at 2016-07-11 16:20:11 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (4.7ms)
+Completed 200 OK in 731ms (Views: 706.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/alpha-blog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-11 16:20:12 +1000
+
+
+Started GET "/assets/custom.self-0a3d758ba4da7c7945fab0b616fd388fc398f708a7de4194a7335dbd924b30d7.css?body=1" for ::1 at 2016-07-11 16:20:12 +1000
+
+
+Started GET "/" for ::1 at 2016-07-11 16:20:29 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 104ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/orange-background-f876bcd0e40474853a05414ca0553d1dc70c6ac99fbb211c3945f18f58b24a8a.png" for ::1 at 2016-07-11 16:20:29 +1000
+
+
+Started GET "/" for ::1 at 2016-07-11 16:20:33 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2016-07-11 16:20:35 +1000
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (4.1ms)
+Completed 200 OK in 125ms (Views: 123.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/1" for ::1 at 2016-07-11 16:20:39 +1000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+Completed 200 OK in 159ms (Views: 105.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1/edit" for ::1 at 2016-07-11 16:20:42 +1000
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (58.8ms)
+  Rendered articles/edit.html.erb within layouts/application (60.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+Completed 200 OK in 133ms (Views: 131.7ms | ActiveRecord: 0.1ms)
