@@ -1,8 +1,14 @@
-<hr/>
-<table>
-<tr>
-<td><%= link_to image_tag('home.png', size: "50x50"), root_path %></td>
-<td><%= image_tag('blank.png', size: "15x15") %></td>
-<td><%= link_to image_tag('about_us.png', size: "50x50"), about_path %></td>
-</tr>
-</table>
+<div class="container">
+  <footer class="footer"> 
+    <small>
+      Copyright &copy; <a href="http://www.udemy.com"> Alpha Blog</a>
+    </small>
+  <table class="buttons">
+    <tr>
+      <td><%= link_to image_tag('home.png', class: 'footer-button'), root_path %></td>
+      <td><%= image_tag 'blank.png', class: "spacer-button" %></td>
+      <td><%= link_to image_tag('about_us.png', class: "footer-button"), about_path %></td>
+    </tr>
+  </table>
+</footer>
+</div>

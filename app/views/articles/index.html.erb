@@ -1,7 +1,6 @@
 <% @page_title = "Articles" %>
 <div class="article index">
   <h2>Articles</h2>
-  <%= link_to("<< Back to Articles", {:controller => "articles", :action => 'index'}, :class => 'back-link') %>
   <%= link_to("Add New Article", {:action => 'new'}, :class => 'action new') %>
   <div><%= pluralize(@articles.size, 'page') %> found.</div>
   <table class="listing" summary="Article list">
