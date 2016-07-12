@@ -1,24 +1,22 @@
 <% @page_title = "Articles" %>
-<div class="article index">
-  <h2>Articles</h2>
-  <%= link_to("Add New Article", {:action => 'new'}, :class => 'action new') %>
+<h1 align="center">Listing All Articles</h1>
   <div><%= pluralize(@articles.size, 'article') %> found.</div>
-  <table class="listing" summary="Article list">
-    <tr class="header">
-      <th>Title</th>
-      <th>Description</th>
-      <th>Actions</th>
-    </tr>
-    <% @articles.each do |article| %>
-    <tr class="<%= cycle('odd', 'even') %>">
-      <td><%= article.title%></td>
-      <td><%= article.description %></td>
-      <td class="actions">
-        <%= link_to "Show", article_path(article), :class => 'action show' %>
-        <%= link_to "Edit", edit_article_path(article), :class => 'action edit' %>
-        <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"},:class => 'action delete' %>
-      </td>
-    </tr>
-    <% end %>
-  </table>
-</div>
+  <% @articles.each do |article| %>
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="well well-lg">
+          <div class="article-title">
+            <%= link_to article.title, article_path(article) %>
+          </div>
+          <div class="article-body">
+            <%= truncate(article.description, length: 100) %>
+          </div> 
+          <div class="article-actions">
+            <%= link_to "Edit this article", edit_article_path(article), :class => 'btn btn-xs btn-primary'  %> 
+            <%= link_to "Delete this article", article_path(article), method: :delete, 
+            data: {confirm: "Are you sure  you want to delete this article?"}, class: "btn btn-xs btn-danger" %>
+          </div>
+      </div>
+    </div>
+  </div>
+<% end %>
