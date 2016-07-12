@@ -1,14 +1,29 @@
 <% flash.each do |key, value| %>
-    <% if key.start_with?("error") %>
-      <h4 class="alert-error">Unable to save this record due to below <%= value.count %> <%= "error".pluralize(value.count) %></h4>
-      <ul>
-        <% value.each do |msg| %>
-          <li><div class="alert alert-<%= key %>"><%= msg %></div></li>
-        <% end %>
-        <ul>
-    <% else %>
-      <ul>
-        <li><div class="alert-success"><%= value %></div></li>
-      </ul>
-    <% end %> 
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <% if key.start_with?("danger") && value.kind_of?(Array) %>  
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <div class="panel-title">
+              <h4 class="alert-danger">Unable to save this record due to below <%= value.count %> 
+                <%= "error".pluralize(value.count) %></h4>
+                <div class="panel-body">
+                  <ul>
+                    <% value.each do |msg| %>
+                      <li class="alert-<%= key %>"><%= msg %></li>
+                    <% end %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% else %>
+                <div class='alert alert-<%="#{key}" %>'>
+                  <a href="#" class="close" data-dismiss="alert">&#215;</a>
+                  <%= content_tag :div, value, :id => "flash_#{key}" if value.is_a?(String) %>
+                </div>
+                  <!-- <li class="alert-success"><%= value %></li> -->
+              <% end %> 
+        </div>
+      </div>
   <% end %>

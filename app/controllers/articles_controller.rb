@@ -17,10 +17,10 @@ def create
     flash[:success] = "Article was successfuly created."
     redirect_to article_path(:id => @article.id)
   else
-    @article.errors.full_messages.each do |msg|
-      flash[:error] = @article.errors.full_messages
-    end 
-    @article.errors.clear
+    #@article.errors.full_messages.each do |msg|
+    #  flash[:danger] = @article.errors.full_messages
+    #end 
+    #@article.errors.clear
     render 'new'
   end
 end
@@ -39,17 +39,17 @@ def update
     flash[:success] = "Article was successfuly updated."
     redirect_to article_path(:id => @article.id)
   else
-    @article.errors.full_messages.each do |msg|
-      flash[:error] = @article.errors.full_messages
-    end 
-    @article.errors.clear
+    #@article.errors.full_messages.each do |msg|
+    #  flash[:danger] = @article.errors.full_messages
+    #end 
+    #@article.errors.clear
     render 'edit'
   end
 end
 
 def destroy
   @article.destroy
-  flash[:notice] = "Article '#{@article.title}' successfully deleted."
+  flash[:danger] = "Article with title '#{@article.title}' successfully deleted."
   redirect_to articles_path
 end
 
