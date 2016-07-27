@@ -34697,3 +34697,283 @@ Completed 200 OK in 204ms (Views: 133.6ms | ActiveRecord: 32.9ms)
   [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('abc@yahoo.com') LIMIT 1
   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Dan"], ["email", "abc@yahoo.com"], ["created_at", "2016-07-27 06:27:44.999363"], ["updated_at", "2016-07-27 06:27:44.999363"]]
   [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToArticles (20160727063401)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "articles" ADD "user_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160727063401"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2016-07-27 16:44:19 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (5.6ms)
+Completed 200 OK in 2660ms (Views: 2569.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/alpha-blog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/test.self-cc516fe7a418e0f7bb01d1c77d281cc18c6271c43e15b71fdc9a5038f30c35a6.css?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/custom.self-e8d07534cfb228ddd67d2dc64434c635c22a2c6f1e079cdb229c2684f14e197a.css?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/home-34f9170832de83f6fefe6e9e574f6a11805d3fbe80283498770111d2d8c30187.png" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/blank-b6a5fb26767767e284fba52f72371e9a358f28bdf44ffe6484a9da98a083d21b.png" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/about_us-547f5c99eca2e660f2e5ff3744959788197a09cf922c411b1fa095efa657c7ab.png" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/assets/orange-background-f876bcd0e40474853a05414ca0553d1dc70c6ac99fbb211c3945f18f58b24a8a.png" for ::1 at 2016-07-27 16:44:22 +1000
+
+
+Started GET "/articles" for ::1 at 2016-07-27 16:44:26 +1000
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+Completed 200 OK in 299ms (Views: 225.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/articles/42/edit" for ::1 at 2016-07-27 16:44:43 +1000
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"42"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 42]]
+  Rendered shared/_errors.html.erb (4.9ms)
+  Rendered articles/_form.html.erb (70.5ms)
+  Rendered articles/edit.html.erb within layouts/application (77.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (3.9ms)
+Completed 200 OK in 211ms (Views: 174.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-27 16:57:30 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (4.0ms)
+Completed 200 OK in 417ms (Views: 408.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2016-07-27 16:57:33 +1000
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (3.3ms)
+Completed 200 OK in 123ms (Views: 116.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/new" for ::1 at 2016-07-27 16:57:38 +1000
+Processing by ArticlesController#new as HTML
+  Rendered shared/_errors.html.erb (7.5ms)
+  Rendered articles/_form.html.erb (45.6ms)
+  Rendered articles/new.html.erb within layouts/application (48.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+Completed 200 OK in 171ms (Views: 169.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2016-07-27 16:57:56 +1000
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xqt5DAJdZv1X7lY0m7tH4lCXGsvCfR/kEzMVVfYikvlsgZvDTaUBfrP4xzg+wK29V5ZxPXNCEatyjLXDAL7/lw==", "article"=>{"title"=>"Another article", "description"=>"testing validations"}, "commit"=>"Create Article"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered articles/_form.html.erb (5.0ms)
+  Rendered articles/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+Completed 200 OK in 79ms (Views: 72.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for ::1 at 2016-07-27 17:02:57 +1000
+
+SyntaxError (/Users/DEV/rails_projects/alpha-blog/app/controllers/articles_controller.rb:16: unknown regexp options - HARDCODED):
+  app/controllers/articles_controller.rb:16: unknown regexp options - HARDCODED
+
+
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.9ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (88.7ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (240.9ms)
+
+
+Started GET "/articles" for ::1 at 2016-07-27 17:03:06 +1000
+
+SyntaxError (/Users/DEV/rails_projects/alpha-blog/app/controllers/articles_controller.rb:16: unknown regexp options - HARDCODED):
+  app/controllers/articles_controller.rb:16: unknown regexp options - HARDCODED
+
+
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.1ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (56.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (130.2ms)
+
+
+Started POST "/articles" for ::1 at 2016-07-27 17:03:31 +1000
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FWYRo+Z26oSQpeCLl/GTamiSX4Kj6mtbR4e9RGSl152/TPNsqY6NB3SzcYcyink1b5M0dBLVZRQmOB3Skjm68w==", "article"=>{"title"=>"Another article", "description"=>"testing validations"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "articles" ("title", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Another article"], ["description", "testing validations"], ["user_id", 2], ["created_at", "2016-07-27 07:03:31.824320"], ["updated_at", "2016-07-27 07:03:31.824320"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/43
+Completed 302 Found in 70ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/articles/43" for ::1 at 2016-07-27 17:03:31 +1000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 43]]
+  Rendered articles/show.html.erb within layouts/application (19.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 118ms (Views: 113.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for ::1 at 2016-07-27 17:11:50 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#new as HTML
+  Rendered shared/_errors.html.erb (2.1ms)
+  Rendered articles/_form.html.erb (17.2ms)
+  Rendered articles/new.html.erb within layouts/application (21.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (4.0ms)
+Completed 200 OK in 472ms (Views: 454.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for ::1 at 2016-07-27 17:12:10 +1000
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oJ9X4Bk3fkYUBbed98tUl12aXW1MqxH7/K/8vdrogHQKtbUvVs8ZxfATJpFSsL7IWps2m/2UH7SdEFwrLHTtGg==", "article"=>{"title"=>"Test article", "description"=>"Testing validations"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "articles" ("title", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Test article"], ["description", "Testing validations"], ["user_id", 2], ["created_at", "2016-07-27 07:12:10.025157"], ["updated_at", "2016-07-27 07:12:10.025157"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/44
+Completed 302 Found in 26ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/articles/44" for ::1 at 2016-07-27 17:12:10 +1000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 44]]
+  Rendered articles/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (4.7ms)
+Completed 200 OK in 121ms (Views: 116.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for ::1 at 2016-07-27 17:12:17 +1000
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 101ms (Views: 100.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/2" for ::1 at 2016-07-27 17:12:26 +1000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.4ms)
+Completed 200 OK in 72ms (Views: 70.8ms | ActiveRecord: 0.1ms)

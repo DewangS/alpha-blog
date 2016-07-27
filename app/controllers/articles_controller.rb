@@ -13,6 +13,7 @@ end
 def create
   #render plain: params[:article]
   @article = Article.new(article_params)
+  @article.user = User.first  #HARDCODED User
   if @article.save
     flash[:success] = "Article was successfuly created."
     redirect_to article_path(:id => @article.id)
