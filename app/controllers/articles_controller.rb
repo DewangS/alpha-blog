@@ -62,7 +62,7 @@ private
     params.require(:article).permit(:title, :description)
   end
   def require_same_user
-    if logged_in? && current_user == @article.user
+    if logged_in? && (current_user == @article.user || current_user.admin?)
       true
     else !current_user.admin?
       flash[:danger] = "You can only update or delete your own articles"
