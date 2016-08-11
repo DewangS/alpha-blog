@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :articles
+  has_many :articles, dependent: :destroy
   before_save { self.email = email.downcase }
   VALID_EMAIL_REGX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/
   validates :username, presence: true, 

@@ -64,7 +64,7 @@ private
   def require_same_user
     if logged_in? && current_user == @article.user
       true
-    else
+    else !current_user.admin?
       flash[:danger] = "You can only update or delete your own articles"
       redirect_to articles_path
     end

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :show]
-  before_action :require_same_user, only: [:edit, :update]
-
+  before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :require_admin, only: [:destroy]
 def index
     @users = User.paginate(page: params[:page], per_page: 5)
 end
@@ -45,6 +45,13 @@ def show
   @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
 end
 
+def destroy
+  @user = User.find(params[:id])
+  @user.destroy
+  flash[:danger] = "User and all articles created by the user have been deleted"
+  redirect_to users_path
+end
+
 private
   def user_params
     params.require(:user).permit(:username, :email, :password)
@@ -56,9 +63,15 @@ private
     if !logged_in? 
       flash[:danger] = "You must login to update your own profile"
       redirect_to articles_path
-    elsif logged_in? && current_user != @user
+    elsif logged_in? && current_user != @user && !current_user.admin?
       flash[:danger] = "You can ONLY update your own profile"
       redirect_to articles_path
     end
+  end
+  def require_admin
+    if logged_in? && !current_user.admin?
+       flash[:danger] = "Only admin users can perform that action"
+       redirect_to root_path
+     end 
   end
 end
