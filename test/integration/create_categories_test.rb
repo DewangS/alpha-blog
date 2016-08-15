@@ -8,8 +8,8 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
   end
 
   test "get new category form and create category" do
+    sign_in_as(@user, "password")
     get new_category_path
-    session[:user_id] = @user.id
     assert_template "categories/new"
     assert_difference 'Category.count', 1 do
       post_via_redirect categories_path, category: {name: @category_name}
@@ -19,8 +19,8 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
   end
 
   test "Invalid category submission results in failure" do
+    sign_in_as(@user, "password")
     get new_category_path
-    session[:user_id] = @user.id
     assert_template "categories/new"
     assert_no_difference 'Category.count' do
       assert post_via_redirect categories_path, category: {name: " "}

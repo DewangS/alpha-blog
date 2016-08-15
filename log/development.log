@@ -50272,3 +50272,1771 @@ Processing by UsersController#edit as HTML
   Rendered layouts/_messages.html.erb (0.1ms)
   Rendered layouts/_footer.html.erb (4.0ms)
 Completed 200 OK in 80ms (Views: 78.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:36:19 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 35ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:36:19 +1000
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered articles/_article.html.erb (18.0ms)
+  Rendered articles/index.html.erb within layouts/application (34.7ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+Completed 500 Internal Server Error in 425ms
+
+SyntaxError (/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:25: syntax error, unexpected keyword_do_block
+'.freeze;               Category.all each |category| do 
+                                                       ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+...afe_append='              <li><a href="#">Another link</a></...
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...   <li><a href="#">Another link</a></a></li>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+... href="#">Another link</a></a></li>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:29: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:30: syntax error, unexpected '<'
+              <li><a href="#">Separated link</a></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+              <li><a href="#">Separated link</a></li>
+                                            ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:30: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:31: syntax error, unexpected keyword_class, expecting ')'
+              <li role="separator" class="divider"></li>
+                                        ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+                                                    ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:32: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:32: syntax error, unexpected '<'
+              <li><a href="#">One more separated link</a></li>
+                                                          ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:33: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '<'
+          </li>
+           ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:37: unknown regexp options - pa
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:37: syntax error, unexpected '<'
+...ns <span class="caret"></span></a>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:39: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:40: syntax error, unexpected '<'
+              <li>'.freeze;@output_buffer.ap...
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:40: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:41: syntax error, unexpected keyword_class, expecting ')'
+              <li role="separator" class="divider"></li>
+                                        ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+                                                    ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:42: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:42: syntax error, unexpected '<'
+              <li><a href="#">Separated link</a></li>
+                                                 ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:43: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:44: syntax error, unexpected '<'
+              <li><a href="#">One more separated link</a></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+              <li><a href="#">One more separated link</a></li>
+                                      ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:44: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:45: syntax error, unexpected '<'
+            </ul>
+             ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:46: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:47: syntax error, unexpected '<'
+      </ul>
+       ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:51: unknown regexp options - dv
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:52: syntax error, unexpected '<'
+        <button type="submit" class="btn btn-default">Submit</button>
+         ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:52: syntax error, unexpected keyword_class, expecting ')'
+        <button type="submit" class="btn btn-default">Submit</button>
+                                   ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:53: unknown regexp options - fr
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:54: syntax error, unexpected '<'
+      <ul class="nav navbar-nav navbar-right">
+       ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:56: syntax error, unexpected tCONSTANT, expecting ')'
+...ut_buffer.append=( link_to 'Log out', logout_path, method: :...
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:58: unknown regexp options - pa
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:58: syntax error, unexpected '<'
+...=' <span class="caret"></span></a>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:60: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:61: syntax error, unexpected '<'
+              <li>'.freeze;@output_buffer.ap...
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:62: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:62: syntax error, unexpected '<'
+              <li><a href="#">Something else here</a></li>
+                                                      ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:63: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:64: syntax error, unexpected '<'
+              <li><a href="#">Separated link</a></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+              <li><a href="#">Separated link</a></li>
+                                            ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:64: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:65: syntax error, unexpected '<'
+            </ul>
+             ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:66: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:68: syntax error, unexpected tCONSTANT, expecting ')'
+...ut_buffer.append=( link_to 'Log in', login_path );@output_bu...
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:69: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:72: unknown regexp options - dv
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:72: syntax error, unexpected '<'
+    </div><!-- /.navbar-collapse -->
+           ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:73: unknown regexp options - dv
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:73: syntax error, unexpected '<'
+  </div><!-- /.container-fluid -->
+         ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:74: unknown regexp options - av
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:74: unterminated string meets end of file
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:74: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/layouts/_navigation.html.erb:25: syntax error, unexpected keyword_do_block
+  app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:28: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:29: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:30: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:30: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:31: syntax error, unexpected keyword_class, expecting ')'
+  app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:32: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:32: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:33: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:37: unknown regexp options - pa
+  app/views/layouts/_navigation.html.erb:37: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:39: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:40: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:40: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:41: syntax error, unexpected keyword_class, expecting ')'
+  app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:42: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:42: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:43: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:44: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:44: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:45: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:46: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:47: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:51: unknown regexp options - dv
+  app/views/layouts/_navigation.html.erb:52: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:52: syntax error, unexpected keyword_class, expecting ')'
+  app/views/layouts/_navigation.html.erb:53: unknown regexp options - fr
+  app/views/layouts/_navigation.html.erb:54: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:56: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/_navigation.html.erb:58: unknown regexp options - pa
+  app/views/layouts/_navigation.html.erb:58: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:60: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:61: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:62: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:62: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:63: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:64: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:64: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:65: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:66: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:68: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/_navigation.html.erb:69: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:72: unknown regexp options - dv
+  app/views/layouts/_navigation.html.erb:72: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:73: unknown regexp options - dv
+  app/views/layouts/_navigation.html.erb:73: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:74: unknown regexp options - av
+  app/views/layouts/_navigation.html.erb:74: unterminated string meets end of file
+  app/views/layouts/_navigation.html.erb:74: syntax error, unexpected end-of-input, expecting ')'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___2027217822318889555_70360375396600'
+
+
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.9ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.3ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.9ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (158.5ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:37:03 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:37:03 +1000
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered articles/_article.html.erb (4.8ms)
+  Rendered articles/index.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+Completed 500 Internal Server Error in 71ms
+
+SyntaxError (/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+...afe_append='              <li><a href="#">Another link</a></...
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...   <li><a href="#">Another link</a></a></li>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+... href="#">Another link</a></a></li>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:29: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:30: syntax error, unexpected '<'
+              <li><a href="#">Separated link</a></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+              <li><a href="#">Separated link</a></li>
+                                            ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:30: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:31: syntax error, unexpected keyword_class, expecting ')'
+              <li role="separator" class="divider"></li>
+                                        ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+                                                    ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:32: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:32: syntax error, unexpected '<'
+              <li><a href="#">One more separated link</a></li>
+                                                          ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:33: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '<'
+          </li>
+           ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:37: unknown regexp options - pa
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:37: syntax error, unexpected '<'
+...ns <span class="caret"></span></a>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:39: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:40: syntax error, unexpected '<'
+              <li>'.freeze;@output_buffer.ap...
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:40: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:41: syntax error, unexpected keyword_class, expecting ')'
+              <li role="separator" class="divider"></li>
+                                        ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+                                                    ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:42: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:42: syntax error, unexpected '<'
+              <li><a href="#">Separated link</a></li>
+                                                 ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:43: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:44: syntax error, unexpected '<'
+              <li><a href="#">One more separated link</a></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+              <li><a href="#">One more separated link</a></li>
+                                      ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:44: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:45: syntax error, unexpected '<'
+            </ul>
+             ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:46: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:47: syntax error, unexpected '<'
+      </ul>
+       ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:51: unknown regexp options - dv
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:52: syntax error, unexpected '<'
+        <button type="submit" class="btn btn-default">Submit</button>
+         ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:52: syntax error, unexpected keyword_class, expecting ')'
+        <button type="submit" class="btn btn-default">Submit</button>
+                                   ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:53: unknown regexp options - fr
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:54: syntax error, unexpected '<'
+      <ul class="nav navbar-nav navbar-right">
+       ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:56: syntax error, unexpected tCONSTANT, expecting ')'
+...ut_buffer.append=( link_to 'Log out', logout_path, method: :...
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:58: unknown regexp options - pa
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:58: syntax error, unexpected '<'
+...=' <span class="caret"></span></a>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:60: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:61: syntax error, unexpected '<'
+              <li>'.freeze;@output_buffer.ap...
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:62: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:62: syntax error, unexpected '<'
+              <li><a href="#">Something else here</a></li>
+                                                      ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:63: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:64: syntax error, unexpected '<'
+              <li><a href="#">Separated link</a></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+              <li><a href="#">Separated link</a></li>
+                                            ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:64: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:65: syntax error, unexpected '<'
+            </ul>
+             ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:66: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:68: syntax error, unexpected tCONSTANT, expecting ')'
+...ut_buffer.append=( link_to 'Log in', login_path );@output_bu...
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:69: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:72: unknown regexp options - dv
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:72: syntax error, unexpected '<'
+    </div><!-- /.navbar-collapse -->
+           ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:73: unknown regexp options - dv
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:73: syntax error, unexpected '<'
+  </div><!-- /.container-fluid -->
+         ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:74: unknown regexp options - av
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:74: unterminated string meets end of file
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:74: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:28: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:29: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:30: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:30: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:31: syntax error, unexpected keyword_class, expecting ')'
+  app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:32: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:32: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:33: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:37: unknown regexp options - pa
+  app/views/layouts/_navigation.html.erb:37: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:39: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:40: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:40: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:41: syntax error, unexpected keyword_class, expecting ')'
+  app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:42: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:42: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:43: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:44: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:44: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:45: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:46: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:47: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:51: unknown regexp options - dv
+  app/views/layouts/_navigation.html.erb:52: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:52: syntax error, unexpected keyword_class, expecting ')'
+  app/views/layouts/_navigation.html.erb:53: unknown regexp options - fr
+  app/views/layouts/_navigation.html.erb:54: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:56: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/_navigation.html.erb:58: unknown regexp options - pa
+  app/views/layouts/_navigation.html.erb:58: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:60: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:61: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:62: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:62: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:63: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:64: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:64: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:65: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:66: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:68: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/_navigation.html.erb:69: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:72: unknown regexp options - dv
+  app/views/layouts/_navigation.html.erb:72: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:73: unknown regexp options - dv
+  app/views/layouts/_navigation.html.erb:73: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:74: unknown regexp options - av
+  app/views/layouts/_navigation.html.erb:74: unterminated string meets end of file
+  app/views/layouts/_navigation.html.erb:74: syntax error, unexpected end-of-input, expecting ')'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___2027217822318889555_70360375396600'
+
+
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.3ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.3ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.8ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (142.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:37:12 +1000
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:37:12 +1000
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered articles/_article.html.erb (6.7ms)
+  Rendered articles/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+Completed 500 Internal Server Error in 75ms
+
+SyntaxError (/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+...afe_append='              <li><a href="#">Another link</a></...
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...   <li><a href="#">Another link</a></a></li>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+... href="#">Another link</a></a></li>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:29: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:30: syntax error, unexpected '<'
+              <li><a href="#">Separated link</a></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+              <li><a href="#">Separated link</a></li>
+                                            ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:30: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:31: syntax error, unexpected keyword_class, expecting ')'
+              <li role="separator" class="divider"></li>
+                                        ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+                                                    ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:32: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:32: syntax error, unexpected '<'
+              <li><a href="#">One more separated link</a></li>
+                                                          ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:33: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '<'
+          </li>
+           ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:37: unknown regexp options - pa
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:37: syntax error, unexpected '<'
+...ns <span class="caret"></span></a>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:39: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:40: syntax error, unexpected '<'
+              <li>'.freeze;@output_buffer.ap...
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:40: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:41: syntax error, unexpected keyword_class, expecting ')'
+              <li role="separator" class="divider"></li>
+                                        ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+              <li role="separator" class="divider"></li>
+                                                    ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:42: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:42: syntax error, unexpected '<'
+              <li><a href="#">Separated link</a></li>
+                                                 ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:43: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:44: syntax error, unexpected '<'
+              <li><a href="#">One more separated link</a></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+              <li><a href="#">One more separated link</a></li>
+                                      ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:44: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:45: syntax error, unexpected '<'
+            </ul>
+             ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:46: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:47: syntax error, unexpected '<'
+      </ul>
+       ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:51: unknown regexp options - dv
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:52: syntax error, unexpected '<'
+        <button type="submit" class="btn btn-default">Submit</button>
+         ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:52: syntax error, unexpected keyword_class, expecting ')'
+        <button type="submit" class="btn btn-default">Submit</button>
+                                   ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:53: unknown regexp options - fr
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:54: syntax error, unexpected '<'
+      <ul class="nav navbar-nav navbar-right">
+       ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:56: syntax error, unexpected tCONSTANT, expecting ')'
+...ut_buffer.append=( link_to 'Log out', logout_path, method: :...
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:58: unknown regexp options - pa
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:58: syntax error, unexpected '<'
+...=' <span class="caret"></span></a>
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:60: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:61: syntax error, unexpected '<'
+              <li>'.freeze;@output_buffer.ap...
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:62: unknown regexp option - a
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:62: syntax error, unexpected '<'
+              <li><a href="#">Something else here</a></li>
+                                                      ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:63: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:64: syntax error, unexpected '<'
+              <li><a href="#">Separated link</a></li>
+               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+              <li><a href="#">Separated link</a></li>
+                                            ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:64: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:65: syntax error, unexpected '<'
+            </ul>
+             ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:66: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:68: syntax error, unexpected tCONSTANT, expecting ')'
+...ut_buffer.append=( link_to 'Log in', login_path );@output_bu...
+...                               ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:69: unknown regexp option - l
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:72: unknown regexp options - dv
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:72: syntax error, unexpected '<'
+    </div><!-- /.navbar-collapse -->
+           ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:73: unknown regexp options - dv
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:73: syntax error, unexpected '<'
+  </div><!-- /.container-fluid -->
+         ^
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:74: unknown regexp options - av
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:74: unterminated string meets end of file
+/Users/DEV/rails_projects/alpha-blog/app/views/layouts/_navigation.html.erb:74: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:28: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:28: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:29: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:30: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:30: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:31: syntax error, unexpected keyword_class, expecting ')'
+  app/views/layouts/_navigation.html.erb:31: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:32: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:32: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:33: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:37: unknown regexp options - pa
+  app/views/layouts/_navigation.html.erb:37: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:39: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:40: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:40: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:41: syntax error, unexpected keyword_class, expecting ')'
+  app/views/layouts/_navigation.html.erb:41: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:42: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:42: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:43: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:44: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:44: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:45: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:46: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:47: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:51: unknown regexp options - dv
+  app/views/layouts/_navigation.html.erb:52: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:52: syntax error, unexpected keyword_class, expecting ')'
+  app/views/layouts/_navigation.html.erb:53: unknown regexp options - fr
+  app/views/layouts/_navigation.html.erb:54: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:56: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/_navigation.html.erb:58: unknown regexp options - pa
+  app/views/layouts/_navigation.html.erb:58: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:60: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:61: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:62: unknown regexp option - a
+  app/views/layouts/_navigation.html.erb:62: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:63: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:64: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/layouts/_navigation.html.erb:64: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:65: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:66: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:68: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/_navigation.html.erb:69: unknown regexp option - l
+  app/views/layouts/_navigation.html.erb:72: unknown regexp options - dv
+  app/views/layouts/_navigation.html.erb:72: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:73: unknown regexp options - dv
+  app/views/layouts/_navigation.html.erb:73: syntax error, unexpected '<'
+  app/views/layouts/_navigation.html.erb:74: unknown regexp options - av
+  app/views/layouts/_navigation.html.erb:74: unterminated string meets end of file
+  app/views/layouts/_navigation.html.erb:74: syntax error, unexpected end-of-input, expecting ')'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___2027217822318889555_70360375396600'
+
+
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.1ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (142.7ms)
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:37:56 +1000
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered articles/_article.html.erb (5.6ms)
+  Rendered articles/index.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_navigation.html.erb (19.8ms)
+Completed 500 Internal Server Error in 88ms
+
+ActionView::Template::Error (undefined local variable or method `each' for #<#<Class:0x007ffc19c074a8>:0x007ffc1a76ead0>):
+    22:             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+    23:             <ul class="dropdown-menu">
+    24:               <li><%= link_to "All Categories", categories_path %></li>  
+    25:               <% Category.all each do |category| %>
+    26:                 <%= link_to category.name, category_path %>
+    27:               <% end %> 
+    28:               <li><a href="#">Another link</a></a></li>
+  app/views/layouts/_navigation.html.erb:25:in `_app_views_layouts__navigation_html_erb__406270693191770631_70360418506600'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___2027217822318889555_70360375396600'
+
+
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.2ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.9ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (149.0ms)
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:38:44 +1000
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered articles/_article.html.erb (4.5ms)
+  Rendered articles/index.html.erb within layouts/application (10.4ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (9.6ms)
+Completed 500 Internal Server Error in 80ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"} missing required keys: [:id]):
+    23:             <ul class="dropdown-menu">
+    24:               <li><%= link_to "All Categories", categories_path %></li>  
+    25:               <% Category.all.each do |category| %>
+    26:                 <%= link_to category.name, category_path %>
+    27:               <% end %> 
+    28:               <li><a href="#">Another link</a></a></li>
+    29:               <li role="separator" class="divider"></li>
+  app/views/layouts/_navigation.html.erb:26:in `block in _app_views_layouts__navigation_html_erb__406270693191770631_70360386017520'
+  app/views/layouts/_navigation.html.erb:25:in `_app_views_layouts__navigation_html_erb__406270693191770631_70360386017520'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___2027217822318889555_70360375396600'
+
+
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.7ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.3ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (147.4ms)
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:39:23 +1000
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered articles/_article.html.erb (4.7ms)
+  Rendered articles/index.html.erb within layouts/application (10.4ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (5.7ms)
+Completed 500 Internal Server Error in 95ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"} missing required keys: [:id]):
+    23:             <ul class="dropdown-menu">
+    24:               <li><%= link_to "All Categories", categories_path %></li>  
+    25:               <% Category.all.each do |category| %>
+    26:                 <%= link_to "test", category_path %>
+    27:               <% end %> 
+    28:               <li><a href="#">Another link</a></a></li>
+    29:               <li role="separator" class="divider"></li>
+  app/views/layouts/_navigation.html.erb:26:in `block in _app_views_layouts__navigation_html_erb__406270693191770631_70360397751860'
+  app/views/layouts/_navigation.html.erb:25:in `_app_views_layouts__navigation_html_erb__406270693191770631_70360397751860'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___2027217822318889555_70360375396600'
+
+
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.9ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.1ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/DEV/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (149.2ms)
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:40:20 +1000
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered articles/_article.html.erb (4.2ms)
+  Rendered articles/index.html.erb within layouts/application (10.0ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (5.4ms)
+Completed 200 OK in 94ms (Views: 92.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/alpha-blog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/test.self-cc516fe7a418e0f7bb01d1c77d281cc18c6271c43e15b71fdc9a5038f30c35a6.css?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/custom.self-6ea317634de58197a62c19cb9b368754785e0e1d7a8dcd8bf0210595a11f878f.css?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/home-34f9170832de83f6fefe6e9e574f6a11805d3fbe80283498770111d2d8c30187.png" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/about_us-547f5c99eca2e660f2e5ff3744959788197a09cf922c411b1fa095efa657c7ab.png" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/assets/blank-b6a5fb26767767e284fba52f72371e9a358f28bdf44ffe6484a9da98a083d21b.png" for ::1 at 2016-08-15 17:40:20 +1000
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:40:42 +1000
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered articles/_article.html.erb (4.2ms)
+  Rendered articles/index.html.erb within layouts/application (9.6ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (3.3ms)
+Completed 200 OK in 87ms (Views: 85.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/alpha-blog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/test.self-cc516fe7a418e0f7bb01d1c77d281cc18c6271c43e15b71fdc9a5038f30c35a6.css?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/custom.self-6ea317634de58197a62c19cb9b368754785e0e1d7a8dcd8bf0210595a11f878f.css?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/home-34f9170832de83f6fefe6e9e574f6a11805d3fbe80283498770111d2d8c30187.png" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/blank-b6a5fb26767767e284fba52f72371e9a358f28bdf44ffe6484a9da98a083d21b.png" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/assets/about_us-547f5c99eca2e660f2e5ff3744959788197a09cf922c411b1fa095efa657c7ab.png" for ::1 at 2016-08-15 17:40:42 +1000
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:41:21 +1000
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered articles/_article.html.erb (6.1ms)
+  Rendered articles/index.html.erb within layouts/application (11.6ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (4.7ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/alpha-blog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/custom.self-6ea317634de58197a62c19cb9b368754785e0e1d7a8dcd8bf0210595a11f878f.css?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/test.self-cc516fe7a418e0f7bb01d1c77d281cc18c6271c43e15b71fdc9a5038f30c35a6.css?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/home-34f9170832de83f6fefe6e9e574f6a11805d3fbe80283498770111d2d8c30187.png" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/blank-b6a5fb26767767e284fba52f72371e9a358f28bdf44ffe6484a9da98a083d21b.png" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/assets/about_us-547f5c99eca2e660f2e5ff3744959788197a09cf922c411b1fa095efa657c7ab.png" for ::1 at 2016-08-15 17:41:21 +1000
+
+
+Started GET "/categories/2" for ::1 at 2016-08-15 17:41:31 +1000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered categories/show.html.erb within layouts/application (2.7ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (4.6ms)
+Completed 200 OK in 77ms (Views: 74.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:45:25 +1000
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered articles/_article.html.erb (5.5ms)
+  Rendered articles/index.html.erb within layouts/application (11.3ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (6.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+Completed 200 OK in 89ms (Views: 87.7ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-08-15 17:45:32 +1000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8RcxM39T8dkYSo8hN2tDv61ZdUVhHUP+fKo/LtUQ+6Q9rrYJfA27Mny0J4o77v/4oj3GTYLkZPK+smtoLIDf8g=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:45:32 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+Completed 200 OK in 70ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-08-15 17:45:35 +1000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (3.2ms)
+Completed 200 OK in 100ms (Views: 99.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-08-15 17:45:42 +1000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fy89ibiNrpHNrCSr/QqS9PzOOo3Up7rvK3QbdbJbtyCzlrqzu9PkeqlSjADxjy6z86qJhTdenePpbE8zS8uTdg==", "session"=>{"email"=>"dshahu@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "dshahu@yahoo.com"]]
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 99ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/11" for ::1 at 2016-08-15 17:45:42 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 11]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? LIMIT 5 OFFSET 0  [["user_id", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered articles/_article.html.erb (4.0ms)
+  Rendered users/show.html.erb within layouts/application (8.1ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (3.2ms)
+Completed 200 OK in 95ms (Views: 85.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for ::1 at 2016-08-15 17:45:47 +1000
+Processing by CategoriesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0
+  Rendered categories/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.5ms)
+Completed 200 OK in 77ms (Views: 74.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories" for ::1 at 2016-08-15 17:47:57 +1000
+Processing by CategoriesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0
+  Rendered categories/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (5.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+Completed 200 OK in 80ms (Views: 79.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/alpha-blog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/test.self-cc516fe7a418e0f7bb01d1c77d281cc18c6271c43e15b71fdc9a5038f30c35a6.css?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/custom.self-6ea317634de58197a62c19cb9b368754785e0e1d7a8dcd8bf0210595a11f878f.css?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/home-34f9170832de83f6fefe6e9e574f6a11805d3fbe80283498770111d2d8c30187.png" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/about_us-547f5c99eca2e660f2e5ff3744959788197a09cf922c411b1fa095efa657c7ab.png" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/assets/blank-b6a5fb26767767e284fba52f72371e9a358f28bdf44ffe6484a9da98a083d21b.png" for ::1 at 2016-08-15 17:47:57 +1000
+
+
+Started GET "/" for ::1 at 2016-08-15 17:48:00 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:48:00 +1000
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered articles/_article.html.erb (4.3ms)
+  Rendered articles/index.html.erb within layouts/application (10.4ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (3.1ms)
+Completed 200 OK in 86ms (Views: 84.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/new" for ::1 at 2016-08-15 17:48:04 +1000
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_errors.html.erb (2.4ms)
+  Rendered categories/_form.html.erb (6.5ms)
+  Rendered categories/new.html.erb within layouts/application (8.3ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 82ms (Views: 80.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-08-15 17:48:07 +1000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BNxYZLWPBIoAyjJvrzerhygF4JY+45N1taKMYAXxMh/IZd9ettFOYWQ0msSjshfAJ2FTnt0atHl3utgm/GEWSQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:48:07 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.6ms)
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:48:14 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (3.8ms)
+Completed 200 OK in 70ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:48:17 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (4.8ms)
+Completed 200 OK in 74ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:57:25 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (4.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (3.8ms)
+Completed 200 OK in 79ms (Views: 78.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/alpha-blog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/custom.self-6ea317634de58197a62c19cb9b368754785e0e1d7a8dcd8bf0210595a11f878f.css?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/test.self-cc516fe7a418e0f7bb01d1c77d281cc18c6271c43e15b71fdc9a5038f30c35a6.css?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/home-34f9170832de83f6fefe6e9e574f6a11805d3fbe80283498770111d2d8c30187.png" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/about_us-547f5c99eca2e660f2e5ff3744959788197a09cf922c411b1fa095efa657c7ab.png" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/blank-b6a5fb26767767e284fba52f72371e9a358f28bdf44ffe6484a9da98a083d21b.png" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/assets/orange-background-f876bcd0e40474853a05414ca0553d1dc70c6ac99fbb211c3945f18f58b24a8a.png" for ::1 at 2016-08-15 17:57:25 +1000
+
+
+Started GET "/articles" for ::1 at 2016-08-15 17:57:28 +1000
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  Rendered articles/_article.html.erb (3.7ms)
+  Rendered articles/index.html.erb within layouts/application (9.8ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (4.8ms)
+Completed 200 OK in 88ms (Views: 86.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2016-08-15 17:57:31 +1000
+Processing by UsersController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 6]]
+  Rendered users/index.html.erb within layouts/application (13.1ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (3.1ms)
+Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:58:12 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 85ms (Views: 84.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/alpha-blog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/custom.self-6ea317634de58197a62c19cb9b368754785e0e1d7a8dcd8bf0210595a11f878f.css?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/test.self-cc516fe7a418e0f7bb01d1c77d281cc18c6271c43e15b71fdc9a5038f30c35a6.css?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/home-34f9170832de83f6fefe6e9e574f6a11805d3fbe80283498770111d2d8c30187.png" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/blank-b6a5fb26767767e284fba52f72371e9a358f28bdf44ffe6484a9da98a083d21b.png" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/about_us-547f5c99eca2e660f2e5ff3744959788197a09cf922c411b1fa095efa657c7ab.png" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/assets/orange-background-f876bcd0e40474853a05414ca0553d1dc70c6ac99fbb211c3945f18f58b24a8a.png" for ::1 at 2016-08-15 17:58:12 +1000
+
+
+Started GET "/login" for ::1 at 2016-08-15 17:58:30 +1000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 78ms (Views: 76.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for ::1 at 2016-08-15 17:58:37 +1000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"32tYlx6zJncBsbNofwBYhJVM5R/ADfgs8ncsau+jYCET0t+tHe1snGVPG8NzheTDmihWFyP03yAwb3gsFjNEdw==", "session"=>{"email"=>"dshahu@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "dshahu@yahoo.com"]]
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 96ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/11" for ::1 at 2016-08-15 17:58:37 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 11]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? LIMIT 5 OFFSET 0  [["user_id", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered articles/_article.html.erb (4.2ms)
+  Rendered users/show.html.erb within layouts/application (7.3ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 95ms (Views: 93.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/new" for ::1 at 2016-08-15 17:58:45 +1000
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered categories/_form.html.erb (3.0ms)
+  Rendered categories/new.html.erb within layouts/application (4.3ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+Completed 200 OK in 79ms (Views: 77.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for ::1 at 2016-08-15 17:58:48 +1000
+Processing by CategoriesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0
+  Rendered categories/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (3.1ms)
+Completed 200 OK in 79ms (Views: 78.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/new" for ::1 at 2016-08-15 18:01:24 +1000
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/_form.html.erb (2.8ms)
+  Rendered categories/new.html.erb within layouts/application (4.1ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (5.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 79ms (Views: 77.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for ::1 at 2016-08-15 18:02:20 +1000
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/_form.html.erb (3.4ms)
+  Rendered categories/new.html.erb within layouts/application (4.6ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 93ms (Views: 90.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/alpha-blog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-15 18:02:20 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-08-15 18:02:20 +1000
+
+
+Started GET "/assets/custom.self-6ea317634de58197a62c19cb9b368754785e0e1d7a8dcd8bf0210595a11f878f.css?body=1" for ::1 at 2016-08-15 18:02:20 +1000
+
+
+Started GET "/assets/test.self-cc516fe7a418e0f7bb01d1c77d281cc18c6271c43e15b71fdc9a5038f30c35a6.css?body=1" for ::1 at 2016-08-15 18:02:20 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-15 18:02:20 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-08-15 18:02:20 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-15 18:02:20 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-15 18:02:20 +1000
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-08-15 18:02:20 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-08-15 18:02:20 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/home-34f9170832de83f6fefe6e9e574f6a11805d3fbe80283498770111d2d8c30187.png" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/about_us-547f5c99eca2e660f2e5ff3744959788197a09cf922c411b1fa095efa657c7ab.png" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/assets/blank-b6a5fb26767767e284fba52f72371e9a358f28bdf44ffe6484a9da98a083d21b.png" for ::1 at 2016-08-15 18:02:21 +1000
+
+
+Started GET "/categories" for ::1 at 2016-08-15 18:02:23 +1000
+Processing by CategoriesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0
+  Rendered categories/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (3.3ms)
+Completed 200 OK in 78ms (Views: 76.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/new" for ::1 at 2016-08-15 18:02:29 +1000
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered categories/_form.html.erb (3.3ms)
+  Rendered categories/new.html.erb within layouts/application (4.8ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 85ms (Views: 83.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for ::1 at 2016-08-15 18:02:32 +1000
+Processing by CategoriesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0
+  Rendered categories/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.5ms)
+Completed 200 OK in 74ms (Views: 72.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/new" for ::1 at 2016-08-15 18:02:36 +1000
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/_form.html.erb (2.6ms)
+  Rendered categories/new.html.erb within layouts/application (3.9ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (3.5ms)
+Completed 200 OK in 79ms (Views: 77.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories" for ::1 at 2016-08-15 18:02:39 +1000
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8tqT3GNx/uJcg/357DA5GmoB+aD+2o3K/aFvFF8fM2s+YxTmYC+0CTh9VVLgtYVdZWVKqB0jqsY/uTtSpo8XPQ==", "category"=>{"name"=>""}, "commit"=>"Create Category"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered shared/_errors.html.erb (1.4ms)
+  Rendered categories/_form.html.erb (4.5ms)
+  Rendered categories/new.html.erb within layouts/application (6.9ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+Completed 200 OK in 119ms (Views: 88.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/categories" for ::1 at 2016-08-15 18:02:44 +1000
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GRwJaf5AJKLkvqnlZ8voo5WIpdyyb2y3z4jzEsANyR3VpY5T/R5uSYBAAU5rTlTkmuwW1FGWS7sNkKdUOZ3tSw==", "category"=>{"name"=>"ww"}, "commit"=>"Create Category"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT  1 AS one FROM "categories" WHERE "categories"."name" = 'ww' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered categories/_form.html.erb (3.6ms)
+  Rendered categories/new.html.erb within layouts/application (4.9ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.8ms)
+Completed 200 OK in 99ms (Views: 93.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/categories" for ::1 at 2016-08-15 18:02:53 +1000
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1S3zFN+uOZDrJfezKyxNfT9RNntB2mphgKOi3dbkQ+gZlHQu3PBze4/bXxgnqfE6MDWFc6IjTW1Cu/abL3Rnvg==", "category"=>{"name"=>"Sports"}, "commit"=>"Create Category"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = 'Sports' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered categories/_form.html.erb (5.0ms)
+  Rendered categories/new.html.erb within layouts/application (6.2ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (5.2ms)
+Completed 200 OK in 81ms (Views: 76.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 18:02:57 +1000
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for ::1 at 2016-08-15 18:02:57 +1000
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered articles/_article.html.erb (5.5ms)
+  Rendered articles/index.html.erb within layouts/application (11.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (2.6ms)
+Completed 200 OK in 90ms (Views: 88.2ms | ActiveRecord: 0.7ms)
