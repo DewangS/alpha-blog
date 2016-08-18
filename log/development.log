@@ -52040,3 +52040,45 @@ Processing by ArticlesController#index as HTML
   Rendered layouts/_messages.html.erb (0.1ms)
   Rendered layouts/_footer.html.erb (2.6ms)
 Completed 200 OK in 90ms (Views: 88.2ms | ActiveRecord: 0.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateArticleCategories (20160818221334)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "article_categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "article_id" integer, "category_id" integer) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160818221334"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mArticle Load (2.0ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[36mArticleCategory Load (1.6ms)[0m  [1mSELECT "article_categories".* FROM "article_categories"[0m
+  [1m[36mArticleCategory Load (1.5ms)[0m  [1mSELECT "article_categories".* FROM "article_categories"[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "article_categories" ("category_id", "article_id") VALUES (?, ?)[0m  [["category_id", 1], ["article_id", 56]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" INNER JOIN "article_categories" ON "articles"."id" = "article_categories"."article_id" WHERE "article_categories"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35mArticleCategory Load (0.3ms)[0m  SELECT "article_categories".* FROM "article_categories"
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "article_categories" ("category_id", "article_id") VALUES (?, ?)  [["category_id", 3], ["article_id", 5]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" INNER JOIN "article_categories" ON "articles"."id" = "article_categories"."article_id" WHERE "article_categories"."category_id" = ?  [["category_id", 3]]
+  [1m[36mArticleCategory Load (0.3ms)[0m  [1mSELECT "article_categories".* FROM "article_categories"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "article_categories" ("article_id", "category_id") VALUES (?, ?)[0m  [["article_id", 9], ["category_id", 3]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "article_categories" ON "categories"."id" = "article_categories"."category_id" WHERE "article_categories"."article_id" = ?[0m  [["article_id", 9]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "article_categories" ("article_id", "category_id") VALUES (?, ?)  [["article_id", 9], ["category_id", 5]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticleCategory Load (0.3ms)[0m  SELECT  "article_categories".* FROM "article_categories"  ORDER BY "article_categories"."id" ASC LIMIT 1
+  [1m[36mArticleCategory Load (0.3ms)[0m  [1mSELECT  "article_categories".* FROM "article_categories" WHERE "article_categories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArticleCategory Load (0.2ms)[0m  SELECT  "article_categories".* FROM "article_categories" WHERE "article_categories"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mArticleCategory Load (0.2ms)[0m  [1mSELECT  "article_categories".* FROM "article_categories" WHERE "article_categories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mArticleCategory Load (0.3ms)[0m  SELECT  "article_categories".* FROM "article_categories" WHERE "article_categories"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mArticleCategory Load (0.2ms)[0m  [1mSELECT  "article_categories".* FROM "article_categories" WHERE "article_categories"."id" = ? LIMIT 1[0m  [["id", 4]]
