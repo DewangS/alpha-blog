@@ -3,7 +3,7 @@ before_action :set_category, only: [:edit, :update, :show, :destroy]
 before_action :require_admin, except: [:index, :show]
 
   def index
-    @categories = Category.paginate(page: params[:page], per_page: 5)
+    @categories = Category.order("name").paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -28,7 +28,7 @@ before_action :require_admin, except: [:index, :show]
   def update
     if @category.update(category_params)
       flash[:success] = "Category was successfuly updated."
-      redirect_to category_path(:id => @category.id)
+      redirect_to category_path(@category)
     else
       render 'edit'
     end
